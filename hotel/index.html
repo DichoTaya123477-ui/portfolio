@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel & Food Booking | Taya Dicho</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+  --bg: #fff8f1;
+  --text: #1f2937;
+  --accent: #f59e0b;
+  --glass: rgba(255,255,255,0.6);
+  --glass-border: rgba(0,0,0,0.08);
+  --blur: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body { background: var(--bg); color: var(--text); }
+
+/* Navbar */
+.navbar {
+  position: fixed; top:0; left:0; right:0; height:60px;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:0 24px; backdrop-filter: blur(var(--blur));
+  background: var(--glass); border-bottom:1px solid var(--glass-border);
+  z-index:1000;
+}
+.navbar .logo { font-weight:700; color:var(--accent); font-size:20px; }
+.navbar .nav-links { display:flex; gap:18px; }
+.navbar .nav-links a { text-decoration:none; color:var(--text); font-weight:600; }
+
+/* Hero */
+.hero {
+  padding:140px 20px 80px; text-align:center; background: linear-gradient(135deg, #ffe3b8, #fffbeb);
+  border-bottom-left-radius:40px; border-bottom-right-radius:40px;
+}
+.hero h1 { font-size:clamp(32px,6vw,48px); margin-bottom:12px; }
+.hero p { font-size:18px; margin-bottom:20px; color:#92400e; }
+.button { display:inline-block; padding:14px 28px; border-radius:999px;
+  text-decoration:none; font-weight:600; color:white; background:var(--accent);
+  transition: transform 0.25s ease;
+}
+.button:hover { transform: translateY(-3px) scale(1.02); }
+
+/* Sections */
+.section { max-width:1100px; margin:60px auto; padding:30px; border-radius:24px;
+  background: var(--glass); backdrop-filter: blur(var(--blur)); border:1px solid var(--glass-border);
+}
+
+/* Cards */
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+.card { background:white; border-radius:16px; overflow:hidden; width:280px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img { width:100%; height:160px; object-fit:cover; }
+.card-content { padding:14px; }
+.card h3 { font-size:18px; margin-bottom:6px; color:var(--accent); }
+.card p { font-size:14px; color:#4b5563; }
+.card:hover { transform: translateY(-6px); box-shadow:0 12px 25px rgba(245,158,11,0.2); }
+
+/* Contact */
+.contact a { margin-top:12px; display:inline-block; }
+
+/* Responsive */
+@media(max-width:768px){ .cards { flex-direction:column; align-items:center; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">HotelBooking</div>
+  <div class="nav-links">
+    <a href="#hotels">Hotels</a>
+    <a href="#food">Food</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Book Hotels & Order Food</h1>
+  <p>Find the best hotels and enjoy online food ordering with easy checkout.</p>
+  <a href="#hotels" class="button">Explore Hotels</a>
+</section>
+
+<section class="section" id="hotels">
+  <h2>Featured Hotels</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501117716987-c8e8f157a7b6" alt="Hotel 1">
+      <div class="card-content">
+        <h3>Luxury Stay</h3>
+        <p>Comfortable rooms with top amenities and prime location.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a" alt="Hotel 2">
+      <div class="card-content">
+        <h3>Budget Inn</h3>
+        <p>Affordable cozy rooms with a friendly environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="food">
+  <h2>Food Menu</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Food 1">
+      <div class="card-content">
+        <h3>Italian Pizza</h3>
+        <p>Freshly baked pizza with organic ingredients.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177523-0e179d7a3b2f" alt="Food 2">
+      <div class="card-content">
+        <h3>Burger Combo</h3>
+        <p>Delicious burgers served with fries and drinks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <h2>Contact & Booking</h2>
+  <p>Book a hotel or order food easily via WhatsApp!</p>
+  <a class="button" href="https://wa.me/918794207783?text=Hi%20Taya,%20I%20want%20to%20book%20a%20hotel%20or%20order%20food" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Contact Me
+  </a>
+</section>
+
+</body>
+</html>

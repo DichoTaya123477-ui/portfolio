@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakery Home Delivery | Taya Dicho</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+  --bg: #fff7ed;
+  --text: #1e293b;
+  --accent: #f97316;
+  --glass: rgba(255,255,255,0.6);
+  --glass-border: rgba(0,0,0,0.08);
+  --blur: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body { background: var(--bg); color: var(--text); }
+
+/* Navbar */
+.navbar { position:fixed; top:0; left:0; right:0; height:60px;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:0 24px; backdrop-filter: blur(var(--blur)); background:var(--glass);
+  border-bottom:1px solid var(--glass-border); z-index:1000;
+}
+.navbar .logo { font-weight:700; color:var(--accent); font-size:20px; }
+.navbar .nav-links { display:flex; gap:18px; }
+.navbar .nav-links a { text-decoration:none; color:var(--text); font-weight:600; }
+
+/* Hero */
+.hero { padding:140px 20px 80px; text-align:center; background: linear-gradient(135deg,#fff1e6,#ffedd5); border-bottom-left-radius:40px; border-bottom-right-radius:40px; }
+.hero h1 { font-size:clamp(32px,6vw,48px); margin-bottom:12px; }
+.hero p { font-size:18px; margin-bottom:20px; color:#c2410c; }
+.button { display:inline-block; padding:14px 28px; border-radius:999px; text-decoration:none; font-weight:600; color:white; background:var(--accent); transition: transform 0.25s ease; }
+.button:hover { transform: translateY(-3px) scale(1.02); }
+
+/* Sections */
+.section { max-width:1100px; margin:60px auto; padding:30px; border-radius:24px; background: var(--glass); backdrop-filter: blur(var(--blur)); border:1px solid var(--glass-border); }
+
+/* Cards */
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+.card { background:white; border-radius:16px; overflow:hidden; width:280px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card img { width:100%; height:180px; object-fit:cover; }
+.card-content { padding:14px; }
+.card h3 { font-size:18px; margin-bottom:6px; color:var(--accent); }
+.card p { font-size:14px; color:#4b5563; }
+.card:hover { transform: translateY(-6px); box-shadow:0 12px 25px rgba(249,115,22,0.2); }
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Bakery Delivery</div>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="#offers">Special Offers</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Bakery Home Delivery</h1>
+  <p>Order your favorite bakery items online and get them delivered at home.</p>
+  <a href="#products" class="button">View Products</a>
+</section>
+
+<section class="section" id="products">
+  <h2>Our Products</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611162617210-0f3dc20d7db5" alt="Cake 1">
+      <div class="card-content">
+        <h3>Chocolate Cake</h3>
+        <p>Rich, moist chocolate cake for every occasion.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Pastry 2">
+      <div class="card-content">
+        <h3>Strawberry Pastry</h3>
+        <p>Fresh and delicious pastries with strawberry filling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="offers">
+  <h2>Special Offers</h2>
+  <p>Get 10% off on your first order!</p>
+</section>
+
+<section class="section contact" id="contact">
+  <h2>Contact</h2>
+  <p>Want to order or inquire? Reach out via WhatsApp!</p>
+  <a class="button" href="https://wa.me/918794207783?text=Hi%20Taya,%20I%20want%20to%20order%20bakery%20items" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Contact Me
+  </a>
+</section>
+
+</body>
+</html>
